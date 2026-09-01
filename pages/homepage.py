@@ -11,10 +11,10 @@ from matcollect.core.utils.modal_ase_viewer import show_material_preview
 # Resolve assets from the project root (this file lives in pages/).
 ASSETS = Path(__file__).resolve().parents[1] / "assets" / "images"
 
-# TODO: fill these in
-URL_DOCS = "https://example.com/docs"
+# TODO: fill paper doi
+URL_DOCS = "https://ergroup.github.io/MatCollect/"
 URL_PAPER = "https://example.com/paper"
-URL_REPO = "https://example.com/repo"
+URL_REPO = "https://github.com/ergroup/MatCollect"
 URL_GROUP = "https://www.amdlab.nl/"
 URL_OPTIMADE = "https://optimade.org/"
 
