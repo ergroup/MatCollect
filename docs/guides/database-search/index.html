@@ -1,0 +1,1412 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MatCollect: A High-throughput Platform for Inorganic Material Curation and Electrochemical Stability Analysis">
+      
+      
+        <meta name="author" content="Haldun Bucak">
+      
+      
+      
+        <link rel="prev" href="../case_studies/">
+      
+      
+        <link rel="next" href="../duplicate-removal/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/matcollect.ico">
+      <meta name="generator" content="zensical-0.0.46">
+    
+    
+      
+        <title>Database search - MatCollect Documentation</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.19d3147f.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetbrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Jetbrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#database-search" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MatCollect Documentation" class="md-header__button md-logo" aria-label="MatCollect Documentation" data-md-component="logo">
+      
+  <img src="../../assets/matcollect.ico" alt="MatCollect Documentation">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MatCollect Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Database search
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MatCollect Documentation" class="md-nav__button md-logo" aria-label="MatCollect Documentation" data-md-component="logo">
+      
+  <img src="../../assets/matcollect.ico" alt="MatCollect Documentation">
+
+    </a>
+    MatCollect Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  MatCollect
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Contributing
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Getting started
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Getting started
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Installation
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Quickstart
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guides
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Guides
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../case_studies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Case Studies
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Database search
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Database search
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-select-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1. Select providers
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-define-your-chemical-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2. Define your chemical system
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Define your chemical system">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exact-system-vs-broad-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exact system vs broad search
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-of-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Number of elements
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#per-provider-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Per-provider limit
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-run-the-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3. Run the search
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-filter-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4. Filter results
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-inspect-a-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5. Inspect a material
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-export-or-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6. Export or continue
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../duplicate-removal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Duplicate removal
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stability-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Stability analysis
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../reference/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Reference
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Reference
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/duplicate-removal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  DuplicateRemover
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/e-above-hull/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HullAnalyzer
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/energy-calibrator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  EnergyCalibrator
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/optimade-extractor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  OptimadeExtractor
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/pourbaix-analyzer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  PourbaixAnalyzer
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-select-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1. Select providers
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-define-your-chemical-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2. Define your chemical system
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Define your chemical system">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exact-system-vs-broad-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exact system vs broad search
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-of-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Number of elements
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#per-provider-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Per-provider limit
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-run-the-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3. Run the search
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-filter-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4. Filter results
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-inspect-a-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5. Inspect a material
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-export-or-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6. Export or continue
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  
+  <span class="md-ellipsis">
+    MatCollect
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../case_studies/" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    Guides
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="database-search">Database search<a class="headerlink" href="#database-search" title="Permanent link">&para;</a></h1>
+<p>This page walks you through finding materials in OPTIMADE-compliant databases and the Materials Project, filtering the results, and passing them to the next step in your workflow.</p>
+<h2 id="1-select-providers">1. Select providers<a class="headerlink" href="#1-select-providers" title="Permanent link">&para;</a></h2>
+<p>Open the <strong>Database Search</strong> page. MatCollect uses the following OPTIMADE-compliant databases:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>ID</th>
+<th>Description</th>
+<th>Homepage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alexandria</td>
+<td>alexandria</td>
+<td>A collection of databases from the group of Prof Miguel A. L. Marques at Ruhr University Bochum.</td>
+<td><a href="https://alexandria.icams.rub.de">https://alexandria.icams.rub.de</a></td>
+</tr>
+<tr>
+<td>Computational materials repository (CMR)</td>
+<td>cmr</td>
+<td>CMR is a collection of materials repositories from different projects such as C2DB, QPOD and many more</td>
+<td><a href="https://cmr.fysik.dtu.dk">https://cmr.fysik.dtu.dk</a></td>
+</tr>
+<tr>
+<td>Materials Cloud</td>
+<td>mcloud</td>
+<td>A platform for Open Science built for seamless sharing of resources in computational materials science</td>
+<td><a href="https://www.materialscloud.org">https://www.materialscloud.org</a></td>
+</tr>
+<tr>
+<td>The Materials Project</td>
+<td>mp</td>
+<td>An open database of computed materials properties to accelerate materials discovery and design</td>
+<td><a href="https://www.materialsproject.org">https://www.materialsproject.org</a></td>
+</tr>
+<tr>
+<td>novel materials discovery (NOMAD)</td>
+<td>nmd</td>
+<td>A FAIR data sharing platform for materials science data</td>
+<td><a href="https://nomad-lab.eu">https://nomad-lab.eu</a></td>
+</tr>
+<tr>
+<td>open database of xtals</td>
+<td>odbx</td>
+<td>A public database of crystal structures mostly derived from ab initio structure prediction from the group of Dr Andrew Morris at the University of Birmingham <a href="https://ajm143.github.io">https://ajm143.github.io</a></td>
+<td><a href="https://odbx.science">https://odbx.science</a></td>
+</tr>
+<tr>
+<td>Open Materials Database</td>
+<td>omdb</td>
+<td>The Open Materials Database (omdb) is a database of materials properties maintained by the developers of the High-Throughput Toolkit (httk). It enables easy access to useful materials data, in particular via programmatic interaction using this toolkit.</td>
+<td><a href="https://openmaterialsdb.se">https://openmaterialsdb.se</a></td>
+</tr>
+<tr>
+<td>The Open Quantum Materials Database (OQMD)</td>
+<td>oqmd</td>
+<td>The OQMD is a database of DFT calculated thermodynamic and structural properties of materials</td>
+<td><a href="https://oqmd.org">https://oqmd.org</a></td>
+</tr>
+<tr>
+<td>Physical Sciences Data Infrastructure (PSDI)</td>
+<td>psdi</td>
+<td>The Physical Sciences Data Infrastructure (PSDI) is an integrated data infrastructure that directly supports researchers in the physical sciences in the UK to manage, transform and share their data led by the Science and Technology Facilities Council (STFC) and the University of Southampton. As part of this ecosystem, PSDI serves as an OPTIMADE provider to make some data sources available via OPTIMADE endpoints.</td>
+<td><a href="https://www.psdi.ac.uk">https://www.psdi.ac.uk</a></td>
+</tr>
+<tr>
+<td>2DMatpedia</td>
+<td>twodmatpedia</td>
+<td>2DMatpedia, an open computational database of two-dimensional materials from top-down and bottom-up approaches</td>
+<td><a href="http://2dmatpedia.org">http://2dmatpedia.org</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Use <strong>Select All</strong> or <strong>Clear All</strong> to manage your selection quickly, or pick providers individually from the dropdown</li>
+<li>A table shows each selected provider's ID, description, and homepage link</li>
+</ul>
+<h2 id="2-define-your-chemical-system">2. Define your chemical system<a class="headerlink" href="#2-define-your-chemical-system" title="Permanent link">&para;</a></h2>
+<p>Type your chemical system in the <strong>Enter the chemical system(s)</strong> field using element symbols separated by hyphens, for example <code>Fe-O</code> or <code>Ir-Ru-O</code>.</p>
+<p>You can search multiple systems at once by separating them with commas: <code>Fe-O, Li-Fe-P-O, Ir-Ru-O</code>. These are fetched in parallel.</p>
+<h3 id="exact-system-vs-broad-search">Exact system vs broad search<a class="headerlink" href="#exact-system-vs-broad-search" title="Permanent link">&para;</a></h3>
+<p>The <strong>Exact system only</strong> toggle controls what gets returned:</p>
+<ul>
+<li><strong>On (default)</strong> — only materials whose elements match exactly what you entered. <code>Fe-O</code> returns Fe-O binaries only</li>
+<li><strong>Off</strong> — returns any material containing your elements, including supersets like Fe-Mn-O. This can be slow for common elements and return thousands of results</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Broad search is unavailable in multi-system mode, which always uses exact matching.</p>
+</div>
+<h3 id="number-of-elements">Number of elements<a class="headerlink" href="#number-of-elements" title="Permanent link">&para;</a></h3>
+<p>When exact system is off, the <strong>number of elements slider</strong> lets you restrict results to a range of element counts. For example, searching <code>Fe-O</code> with a range of 2-4 returns binaries, ternaries, and quaternaries that contain both Fe and O.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This slider is unavailable in multi-system mode.</p>
+</div>
+<h3 id="per-provider-limit">Per-provider limit<a class="headerlink" href="#per-provider-limit" title="Permanent link">&para;</a></h3>
+<p>Set a <strong>Max materials per database</strong> to cap how many results each provider returns. For simple systems like <code>Fe-O</code>, leaving this empty can return thousands of entries and cause long load times. Setting a limit of a few hundred is strongly recommended for exploratory searches.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If doing a multi-system search, this limit will apply to each chemical system separately. </p>
+</div>
+<h2 id="3-run-the-search">3. Run the search<a class="headerlink" href="#3-run-the-search" title="Permanent link">&para;</a></h2>
+<p><img alt="Database Search" src="/assets/gifs/database_search.gif" /></p>
+<p>Click <strong>Search Materials</strong>. MatCollect connects to each selected provider, retrieves matching entries, and normalises the results into a unified format. A success message shows how many materials were retrieved and how long it took.</p>
+<p>Any provider that fails (rate limits, downtime, missing endpoints) shows an error below the results without cancelling results from other providers.</p>
+<h2 id="4-filter-results">4. Filter results<a class="headerlink" href="#4-filter-results" title="Permanent link">&para;</a></h2>
+<p>Once results load, the <strong>Filter Materials</strong> section lets you narrow them down:</p>
+<ul>
+<li><strong>Contains elements</strong> — keep only materials whose composition includes any of the selected elements</li>
+<li><strong>From these databases</strong> — restrict to specific providers</li>
+<li><strong>Formation energy per atom</strong> — set a numeric range</li>
+<li><strong>Band gap</strong> — same as above</li>
+<li><strong>Number of sites</strong> and <strong>number of elements</strong> — integer range sliders</li>
+</ul>
+<p>The table updates live as you adjust filters, showing how many of the total results remain.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The "include missing values" toggle can be used to keep entries where the value of a parameter is unavailable. This can be applied to formation energy per atom, band gap, and number of sites. It is <strong>ON</strong> by default.</p>
+</div>
+<h2 id="5-inspect-a-material">5. Inspect a material<a class="headerlink" href="#5-inspect-a-material" title="Permanent link">&para;</a></h2>
+<p><img alt="Material Retrieval" src="/assets/gifs/material_retrieval.gif" /></p>
+<p>Click any row in the results table to open a 3D structure viewer for that entry. This uses the lattice vectors and atomic positions retrieved from the database.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can access the material viewer wherever there is a table of materials available at any page.</p>
+</div>
+<h2 id="6-export-or-continue">6. Export or continue<a class="headerlink" href="#6-export-or-continue" title="Permanent link">&para;</a></h2>
+<p>At the bottom of the page you have three options:</p>
+<ul>
+<li><strong>Download</strong> — export the filtered results as a JSON file, or collection of POSCAR, CIF, or ASE atoms files</li>
+<li><strong>Duplicate Removal</strong> — pass the results directly to the duplicate removal page; this is recommended before stability analysis</li>
+<li><strong>Stability Analysis</strong> — skip straight to stability analysis; a warning is shown because duplicates can skew downstream calculations</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../case_studies/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Case Studies">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Case Studies
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../duplicate-removal/" class="md-footer__link md-footer__link--next" aria-label="Next: Duplicate removal">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Duplicate removal
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 The authors
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/user/repo" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.sections","navigation.top","navigation.tracking","search.highlight"],"search":"../../assets/javascripts/workers/search.b6b7e04f.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ee611ef6.min.js"></script>
+      
+    
+  </body>
+</html>
