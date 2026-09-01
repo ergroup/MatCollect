@@ -1,0 +1,9 @@
+[theme]
+base="light"
+primaryColor="#468604"      # Green
+backgroundColor="#FFFFFF"
+textColor="#000000"
+font="sans serif"
+
+[logger]
+level = "error"
