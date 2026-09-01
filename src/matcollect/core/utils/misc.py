@@ -165,7 +165,7 @@ def create_cif_from_materials(optimade_materials: dict) -> io.BytesIO:
         for chemsys, chemsys_dict in optimade_materials.items():
             for database, database_dict in chemsys_dict.items():
                 for material_id, material_data in database_dict.items():
-                    data = material_data["normlized_attributes"]
+                    data = material_data["normalized_attributes"]
                     database_name = format_database_name(database)
                     try:
                         # Convert OPTIMADE data to a pymatgen Structure
