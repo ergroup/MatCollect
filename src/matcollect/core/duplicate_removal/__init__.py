@@ -1,0 +1,1 @@
+"""Duplicate Material Analyzer."""

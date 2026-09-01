@@ -1,0 +1,130 @@
+[tool.ruff]
+# Exclude common virtual envs, caches, and build directories
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+]
+
+line-length = 99
+indent-width = 4
+target-version = "py313"
+
+[tool.ruff.lint]
+# Enable all Ruff rules for maximum PEP-8 coverage
+select = ["ALL"]
+
+# Ignore only rules that are commonly unnecessary or project-specific
+ignore = [
+    "ANN401",    # Optional type annotations
+    "BLE",       # Black line endings, if using Ruff + Black
+    "COM812",    # Optional complexity-related rule
+    "EM",        # Experimental rules
+    "FIX",       # Ruff auto-fix messages
+    "ISC001",    # Optional import-style rules
+    "PERF203",   # Performance nitpicks
+    "PGH003",    # Project-specific
+    "Q000",      # Optional quote enforcement conflicts
+    "T20",       # Test-specific
+    "TC006",     # Test complexity
+    "TD002",     # Test docstring rules
+    "TD003",     # Test docstring rules
+    "TRY003",    # Optional try/except checks
+    "TRY203",    # Optional try/except checks
+    "TRY400",    # Optional try/except checks
+    "S301",      # Use of cPickle
+    "D205",      # missing-blank-line-after-summary
+    "B006",
+    "FBT001",
+    "FBT002",
+    
+]
+
+fixable = ["ALL"]
+unfixable = []
+
+# Allow underscore-prefixed unused variables
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.lint.flake8-annotations]
+# Ignore return type for functions that return None
+suppress-none-returning = true
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+split-on-trailing-comma = false
+
+[tool.ruff.lint.pydocstyle]
+# Enforce docstrings according to PEP-257
+convention = "pep257"
+
+[tool.ruff.lint.pylint]
+# Limit function arguments for readability
+max-args = 6
+
+[tool.ruff.format]
+# Code formatting options similar to Black
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+# Docstring code formatting (optional)
+docstring-code-format = false
+docstring-code-line-length = "dynamic"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "MatCollect"
+version = "1.0.0"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas==3.0.3",
+    "numpy==2.5.0",
+    "plotly==6.8.0",
+    "streamlit==1.58.0",
+    "streamlit-sortables==0.3.1",
+    "pymatgen==2026.5.4",
+    "ase==3.29.0",
+    "py3Dmol==2.5.5",
+    "mp_api==0.46.4",
+    "mpcontribs-client==5.10.5",
+    "emmet-core==0.87.1",
+    "python-dotenv==1.2.2",
+    "optimade[http_client]==1.5.0",
+    "kaleido==1.3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "zensical==0.0.46",
+    "podman-compose>=1.6.0",
+]
+
+[project.scripts]
+matcollect = "matcollect:main"
