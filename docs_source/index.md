@@ -4,7 +4,7 @@
 
 MatCollect is a Streamlit application for collecting, analysing, and visualising materials science data. It connects to materials databases via the OPTIMADE API and the Materials Project, giving you a single interface for querying, cleaning, and evaluating thermodynamic stability across datasets.
 
-**Try it now** — the app is available at [matcollect.example.com](https://matcollect.example.com).
+**Try it now** — the app is available at [matcollect.streamlit.app](https://matcollect.streamlit.app/).
 
 ## What MatCollect does
 
