@@ -2,7 +2,7 @@
 
 MatCollect runs as a Streamlit application. You can install it directly with Python or run it in a container with Docker or Podman.
 
-Alternatively, you can use MatCollect without any installation at [matcollect.example.com](https://matcollect.example.com).
+Alternatively, you can use MatCollect without any installation at [matcollect.streamlit.app](https://matcollect.streamlit.app/).
 
 ## Requirements
 
@@ -13,7 +13,7 @@ Alternatively, you can use MatCollect without any installation at [matcollect.ex
 Clone the repository and install in editable mode:
 
 ```bash
-git clone https://github.com/your-org/matcollect.git
+git clone git@github.com:ergroup/MatCollect.git
 cd matcollect
 pip install -e .
 ```
