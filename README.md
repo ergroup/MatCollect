@@ -83,7 +83,7 @@ MatCollect/
 Clone the repository and install in editable mode:
 
 ```bash
-git clone git@github.com:ItsHaldun/MatCollect.git
+git clone git@github.com:ergroup/MatCollect.git
 cd matcollect
 pip install -e .
 ```
