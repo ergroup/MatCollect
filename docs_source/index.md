@@ -42,7 +42,7 @@ If you use MatCollect in your research, please cite the accompanying paper:
 
 ```bibtex
 @article{matcollect,
-  author  = {Last, First and Last, First},
+  author  = {Bucak, Haldun and Oguz, Ismail Can and Khossossi, Nabil and Er, Süleyman},
   title   = {MatCollect: A tool for collecting, deduplicating, and analysing materials science data},
   journal = {Journal Name},
   year    = {2026},
@@ -56,10 +56,10 @@ You can also cite the specific software version used:
 
 ```bibtex
 @software{matcollect_software,
-  author  = {Last, First and Last, First},
+  author  = {Bucak, Haldun and Oguz, Ismail Can and Khossossi, Nabil and Er, Süleyman},
   title   = {MatCollect},
   year    = {2026},
-  url      = {https://github.com/your-org/matcollect},
+  url      = {https://github.com/ergroup/MatCollect},
   version = {1.0.0}
 }
 ```

@@ -15,7 +15,7 @@ If you are using a container, run `docker compose up` or `podman compose up` ins
 Then open your browser at `http://localhost:8501`.
 
 !!! note
-    You can use MatCollect without any installation at [matcollect.example.com](https://matcollect.example.com)!
+    You can use MatCollect without any installation at [matcollect.streamlit.app](https://matcollect.streamlit.app/)!
 
 ## The workflow at a glance
 
