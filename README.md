@@ -2,6 +2,8 @@
 
 MatCollect is a Streamlit-based application for collecting, analyzing, and visualizing materials science data. It interfaces with materials databases via the OPTIMADE API and the Materials Project, providing a full pipeline from database query to a deduplicated, stability-filtered dataset.
 
+**Try it live: [matcollect.streamlit.app](https://matcollect.streamlit.app/)** — no installation needed.
+
 ## Features
 
 - **Database Search** — query materials databases through OPTIMADE-compliant providers and the Materials Project API, with filtering by chemical system, element count, formation energy, and band gap
@@ -83,8 +85,8 @@ MatCollect/
 Clone the repository and install in editable mode:
 
 ```bash
-git clone git@github.com:ergroup/MatCollect.git
-cd matcollect
+git clone https://github.com/ergroup/MatCollect.git
+cd MatCollect
 pip install -e .
 ```
 
@@ -121,9 +123,9 @@ Full documentation, including API reference for each core class and three worked
 
 Source files live in `docs_source/`. To rebuild after editing:
 
-\```bash
+```bash
 zensical build --clean
-\```
+```
 
 ## Citation
 
